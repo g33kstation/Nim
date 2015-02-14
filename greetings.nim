@@ -21,3 +21,10 @@ case n
 of 0..2, 4..7: echo("n in the set: {0,1,2,3,4,5,6,7}")
 of 3,8: echo("n is 3 or 8")
 else: discard
+
+
+echo("what's your nick? ")
+var nick = readLine(stdin)
+while nick == "":
+  echo("plz tell me your nick: ")
+  nick = readLine(stdin)
