@@ -44,3 +44,18 @@ while i <= 20:
 echo("Counting down from 10 to 1: ")
 for i in countdown(10, 1):
   echo($i)
+
+
+block myblock:
+  echo("entering block")
+  while true:
+    echo("looping")
+    break
+  echo("still in block")
+
+block myblock2:
+  echo("entering block2")
+  while true:
+    echo("looping")
+    break myblock2 # leaves loop & block
+  echo("still in block2") # does not work
