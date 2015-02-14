@@ -28,3 +28,19 @@ var nick = readLine(stdin)
 while nick == "":
   echo("plz tell me your nick: ")
   nick = readLine(stdin)
+
+
+echo("counting to ten: ")
+for i in countup(1, 10)  :
+  echo($i) # $ turns i to a string
+
+echo("counting to twenty: ")
+var i = 1
+while i <= 20:
+  echo($i)
+  inc(i)
+
+
+echo("Counting down from 10 to 1: ")
+for i in countdown(10, 1):
+  echo($i)
