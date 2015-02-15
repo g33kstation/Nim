@@ -61,7 +61,16 @@ block myblock2:
   echo("still in block2") # does not work
 
 
-while true:
-  let x = readLine(stdin)
-  if x == "": continue
-  echo(x)
+# while true:
+#   let x = readLine(stdin)
+#   if x == "": continue
+#   echo(x)
+
+when system.hostOS == "windows":
+  echo("windows running")
+elif system.hostOS == "linux":
+  echo("linux running")
+elif system.hostOS == "macosx":
+  echo("mac osx running")
+else:
+  echo(system.hostOS)
