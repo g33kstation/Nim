@@ -59,3 +59,9 @@ block myblock2:
     echo("looping")
     break myblock2 # leaves loop & block
   echo("still in block2") # does not work
+
+
+while true:
+  let x = readLine(stdin)
+  if x == "": continue
+  echo(x)
