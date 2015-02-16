@@ -42,3 +42,12 @@ var
 divmod(8,5,x,y)
 echo x
 echo y
+
+# ignoring the proc returned value
+discard yes("may i ask a pointless question?")
+
+# return value can be ignored implicitly
+proc p(x, y: int): int {.discardable.} =
+  return x + y
+
+echo p(3,4)
