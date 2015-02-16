@@ -28,6 +28,17 @@ proc printSeq(s: seq, nprinted: int = -1): int =
     echo s[i]
 
 # numeric is a seq
-var numeric = @[9,9]
-echo numeric.len
-echo printSeq(numeric)
+# var numeric = @[9,9]
+# echo numeric.len
+# echo printSeq(numeric)
+
+proc divmod(a,b: int; res, remainder: var int) =
+  res = a div b # integer division
+  remainder = a mod b # integer modulo operation
+
+var
+  x, y: int
+
+divmod(8,5,x,y)
+echo x
+echo y
