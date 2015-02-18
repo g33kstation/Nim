@@ -32,3 +32,26 @@ echo a.type.name
 echo a&b
 
 echo("string addition")
+echo a
+
+echo "Tuples"
+var
+  child: tuple[name: string, age: int]
+  today: tuple[sun: string, temp: float]
+  person: tuple[name: string, sex: char, number: int]
+
+
+child = (name: "Rudiger", age: 2)
+today.sun = "Overcast"
+today.temp = 70.1
+person = (name: "patt", sex: 'm', number: 111)
+
+echo "person sex attribute type"
+echo person.sex.type.name
+
+echo "person sex"
+echo person.sex
+
+echo "person all attributes"
+var g = person
+echo g
