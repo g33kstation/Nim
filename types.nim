@@ -71,5 +71,8 @@ echo drinks.type.name
 echo drinks[1]
 
 # takes several sequeces items & return a new one
-from sequtils import concat
+from sequtils import concat, filter
 echo concat(drinks, drinkz)
+
+var numbers = @[1,2,3,4,5,6,7,8,9,10]
+for n in filter(numbers, proc (x: int): bool = x mod 2 == 0): echo($n)
