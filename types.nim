@@ -1,5 +1,6 @@
 import typetraits
 
+
 var xx = 12
 echo xx.type.name
 
@@ -55,3 +56,20 @@ echo person.sex
 echo "person all attributes"
 var g = person
 echo g
+
+echo "sequences"
+var
+  drinks: seq[string]
+  drinkz: seq[string]
+  w: string
+
+w = "wine"
+drinks = @["water","juice","chocolate"]
+drinkz = @["water1","juice2","chocolate3"]
+
+echo drinks.type.name
+echo drinks[1]
+
+# takes several sequeces items & return a new one
+from sequtils import concat
+echo concat(drinks, drinkz)
