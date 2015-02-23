@@ -32,8 +32,13 @@ echo a.type.name
 
 echo a&b
 
-echo("string addition")
-echo a
+from strutils import split
+echo("string split")
+
+let p = "2012-11-20T22:08:08.398990"
+let separators = {' ', '-', ':', 'T'}
+for number in split(p, separators):
+  writeln(stdout, number)
 
 echo "Tuples"
 var
