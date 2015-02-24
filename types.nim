@@ -81,3 +81,20 @@ echo concat(drinks, drinkz)
 
 var numbers = @[1,2,3,4,5,6,7,8,9,10]
 for n in filter(numbers, proc (x: int): bool = x mod 2 == 0): echo($n)
+
+
+echo "defining types"
+
+type
+  Name = string # a type alias give you a new type that is interchangable
+  Age = int
+  Person = tuple[name: Name, age: Age]
+  Human = tuple
+    fieldOne: string
+    secondField: int
+
+var
+  john: Person = (name: "john", age: 17)
+  newage: int = 18
+
+john.age = newage # int & Age are synonyms
